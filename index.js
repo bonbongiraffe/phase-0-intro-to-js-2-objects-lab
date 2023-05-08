@@ -18,7 +18,7 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
     return employee;
 }
 
-function deleteEmployeeWithKeyAndValue(employee, key){
+function deleteFromEmployeeByKey(employee,key){
     let clone = {};
     for (let property in employee){
         if (property !== key)
@@ -27,6 +27,7 @@ function deleteEmployeeWithKeyAndValue(employee, key){
     return clone;
 }
 
-function destructivelyDeleteEmployeeWithKeyAndValue(employee, key){
-    return;
+function destructivelyDeleteFromEmployeeByKey(employee, key){
+    delete employee[key];
+    return employee;
 }
